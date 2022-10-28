@@ -53,7 +53,7 @@ class Inventario {
         */
     }
 
-    listado() {
+    listar() {
         let lista  = '';
         let temp = this.primero;
 
@@ -66,18 +66,16 @@ class Inventario {
     }
 
 
-    listadoInverso() {
-        /*
-        let lista = '';
-        let temp = this.primero;
+    listarInverso() {
+        let lista = ' ';
+        let temp = this.ultimo;
 
         while(temp !== null) {
-            lista = temp.info() + ' ' + this.lista;
-            temp = temp.next;
+            lista += temp.info() + ' ';
+            temp = temp.anterior;
         }
-        
+
         return lista;
-        */
     }
 
 }

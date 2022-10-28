@@ -27,6 +27,6 @@ class Producto {
     }
 
     info() {
-        return `Codigo: ${this.codigo}  Producto: ${this.nombre}  Cantidad: ${this.cantidad}   Costo: $${this.costo}`;
+        return `<p> Codigo: ${this.codigo}  Producto: ${this.nombre}  Cantidad: ${this.cantidad}   Costo: $${this.costo} <p>`;
     }
 }
