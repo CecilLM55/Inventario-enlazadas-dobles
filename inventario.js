@@ -17,8 +17,9 @@ class Inventario {
         }
     }
 
-//No parece funcionar, checar.
     eliminar(codigo) {
+        
+        /*
         let temp = this.primero;
         
         if(codigo === this.primero.codigo) {
@@ -32,10 +33,12 @@ class Inventario {
                 temp = temp.next
             }
         } 
+        */
     }
 
 
     buscar(codigo) {
+        /*
         let temp = this.primero;
 
         while (temp !== null) {
@@ -47,22 +50,24 @@ class Inventario {
         }
         
         return null;
+        */
     }
 
     listado() {
-        let lista = '';
+        let lista  = '';
         let temp = this.primero;
 
-        while(temp !== null) {
-            lista += temp.info();
+        while(temp) {
+            lista += temp.info() + ' ';
             temp = temp.next;
         }
-        return lista;
 
+        return lista;
     }
 
 
     listadoInverso() {
+        /*
         let lista = '';
         let temp = this.primero;
 
@@ -72,6 +77,7 @@ class Inventario {
         }
         
         return lista;
+        */
     }
 
 }
