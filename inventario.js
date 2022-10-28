@@ -18,22 +18,23 @@ class Inventario {
     }
 
     eliminar(codigo) {
-        
-        /*
         let temp = this.primero;
-        
+
         if(codigo === this.primero.codigo) {
             this.primero = this.primero.next;
+            this.primero.anterior = null;
+        } else if (codigo === this.ultimo.codigo){
+            this.ultimo = this.ultimo.anterior;
+            this.ultimo.next = null;
         } else {
             while(temp !== null) {
-                if (temp.next.codigo === codigo) {
+                if(temp.next.codigo === codigo) {
                     temp.next = temp.next.next;
+                    temp.anterior = temp.anterior;
                 }
-
-                temp = temp.next
+                temp = temp.next;
             }
-        } 
-        */
+        }
     }
 
 

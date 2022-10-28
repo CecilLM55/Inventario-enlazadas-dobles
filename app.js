@@ -15,7 +15,7 @@ const eliminar = document.getElementById('btnEliminar');
 eliminar.addEventListener('click', () => {
    let codigo = document.getElementById('txtCodigo').value;
    miInv.eliminar(codigo);
-   document.getElementById('divDetalles').innerHTML += "<p> Se ha eliminado el producto </p>";
+   document.getElementById('divDetalles').innerHTML += '<p> Se ha eliminado el producto </p>';
 });
 
 const buscar = document.getElementById('btnBuscar');
