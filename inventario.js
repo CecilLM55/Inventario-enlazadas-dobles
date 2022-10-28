@@ -38,7 +38,6 @@ class Inventario {
 
 
     buscar(codigo) {
-        /*
         let temp = this.primero;
 
         while (temp !== null) {
@@ -50,7 +49,6 @@ class Inventario {
         }
         
         return null;
-        */
     }
 
     listar() {

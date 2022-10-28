@@ -31,12 +31,12 @@ buscar.addEventListener('click', () => {
 
 const listar = document.getElementById('btnListado');
 listar.addEventListener('click', () => {
-   document.getElementById("divDetalles").innerHTML += miInv.listado();
+   document.getElementById("divDetalles").innerHTML += miInv.listar();
 });
 
 const listarInv = document.getElementById('btnListadoInv');
 listarInv.addEventListener('click', () => {
-   document.getElementById('divDetalles').innerHTML += miInv.listadoInverso();
+   document.getElementById('divDetalles').innerHTML += miInv.listarInverso();
 });
 
 const insertar = document.getElementById('btnInsertar');
