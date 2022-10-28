@@ -7,6 +7,7 @@ class Producto {
         this.cantidad = cantidad;
         this.costo = costo;
         this.next = null;
+        this.anterior = null;
     }
     
     getCodigo() {

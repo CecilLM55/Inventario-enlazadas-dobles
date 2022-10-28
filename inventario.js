@@ -2,19 +2,19 @@ class Inventario {
 
     constructor() {
         this.primero = null;
+        this.ultimo = null;
     }
 
-    agregar(producto) {
-        let temp = this.primero;
-
-       if(this.primero === null) {
-        this.primero = producto;
-       } else {
-        while (temp.next !== null) {
-            temp = temp.next;
+    agregar(nuevo) {
+        
+        if(this.primero === null) {
+            this.primero = nuevo;
+            this.ultimo = nuevo;
+        } else {
+            this.ultimo.next = nuevo;
+            nuevo.anterior =  this.ultimo;
+            this.ultimo = nuevo;
         }
-        temp.next = producto;
-       }
     }
 
 //No parece funcionar, checar.
@@ -74,22 +74,4 @@ class Inventario {
         return lista;
     }
 
-//Checar porqué no funciona.
-    insertar(posicion, producto) {
-        let aux = this.primero;
-        let anterior;
-        let temp = parseInt(posicion);
-
-        if(temp === 1) {
-            producto.next = this.primero;
-            this.primero = producto;
-        } else {
-            for (let i = 1; i < temp; i++) {
-                anterior = aux;
-                aux = aux.next;
-            }
-            anterior.next = producto;
-            producto.next = aux;
-        }
-    }
 }
