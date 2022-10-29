@@ -5,15 +5,31 @@ class Inventario {
         this.ultimo = null;
     }
 
-    agregar(nuevo) {
+    agregar(producto, codigo) {
+        let temp = this.primero;
         
         if(this.primero === null) {
-            this.primero = nuevo;
-            this.ultimo = nuevo;
+            this.primero = producto;
+            this.ultimo = producto;
         } else {
-            this.ultimo.next = nuevo;
-            nuevo.anterior =  this.ultimo;
-            this.ultimo = nuevo;
+            if(codigo < this.primero.codigo) {
+                producto.next = this.primero;
+                this.primero = producto;
+            } else {
+                while (temp !== null) {
+                    if(temp.codigo < codigo && temp.next === null) {
+                        this.ultimo.next = producto;
+                        producto.anterior = this.ultimo;
+                        this.ultimo = producto;
+                    } else if (temp.codigo < codigo && temp.next.codigo > codigo) {
+                        producto.next = temp.next;
+                        temp.next.anterior = producto;
+                        temp.next = producto;
+                        producto.anterior = temp;
+                    }
+                    temp = temp.next;
+                }
+            }
         }
     }
 
